@@ -7,5 +7,5 @@
 First Minigame coded at 42 Lausanne using minilibx
 
 <p align="center">
-  <img src="README/score.png">
+  <img width="150" src="README/score.png">
 </p>
