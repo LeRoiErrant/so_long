@@ -6,7 +6,7 @@
 /*   By: vheran <vheran@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 18:57:50 by vheran            #+#    #+#             */
-/*   Updated: 2023/01/09 09:22:21 by vheran           ###   ########.fr       */
+/*   Updated: 2023/01/09 18:27:04 by vheran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,13 @@ int	ft_key_event(int keyc, t_game *g)
 				print_hud(g, KEY_HUD);
 		}
 	}
+	return (0);
+}
+
+int	ft_key_event_two(int keyc, t_game *g)
+{
+	if (keyc == W || keyc == A || keyc == S || keyc == D)
+		g->move = true;
+
 	return (0);
 }

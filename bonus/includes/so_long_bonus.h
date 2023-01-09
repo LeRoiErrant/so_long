@@ -6,7 +6,7 @@
 /*   By: vheran <vheran@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 11:24:13 by vheran            #+#    #+#             */
-/*   Updated: 2022/01/13 14:14:16 by vheran           ###   ########.fr       */
+/*   Updated: 2023/01/09 18:25:37 by vheran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ void	move_npc_right(t_game *g, int x, int y);
 /*			   	   Hooks				*/
 /*  ***********************************	*/
 int		ft_key_event(int keyc, t_game *g);
+int		ft_key_event_two(int keyc, t_game *g);
 
 /*  ***********************************	*/
 /*			   	   Events				*/

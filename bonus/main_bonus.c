@@ -6,7 +6,7 @@
 /*   By: vheran <vheran@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 11:28:07 by vheran            #+#    #+#             */
-/*   Updated: 2023/01/09 09:20:21 by vheran           ###   ########.fr       */
+/*   Updated: 2023/01/09 18:25:19 by vheran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	open_game(t_game *g)
 	draw_map(g);
 	print_hud(g, KEY_HUD);
 	mlx_hook(g->w, 2, 0, ft_key_event, g);
-	//mlx_key_hook(g->w, ft_key_event, g);
+	mlx_key_hook(g->w, ft_key_event_two, g);
 	mlx_hook(g->w, 17, 1L << 5, exit_game, g);
 	mlx_loop_hook(g->mlx, anim_frames, g);
 	mlx_loop(g->mlx);
