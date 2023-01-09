@@ -6,7 +6,7 @@
 /*   By: vheran <vheran@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 13:16:37 by vheran            #+#    #+#             */
-/*   Updated: 2021/12/28 15:13:45 by vheran           ###   ########.fr       */
+/*   Updated: 2023/01/09 11:41:34 by vheran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,14 @@ typedef struct s_exit
 	t_tex	off;
 }			t_exit;
 
+typedef struct s_frame {
+	t_tex	wall;
+	t_tex	left;
+	t_tex	right;
+	t_tex	cleft;
+	t_tex	cright;
+}	t_frame;
+
 typedef struct s_game
 {
 	void	*mlx;
@@ -100,10 +108,12 @@ typedef struct s_game
 	t_loot	loot;
 	t_tex	wall;
 	t_tex	water;
+	t_frame	outer;
 	t_tex	floor;
 	t_exit	exit;
 	int		end_screen;
 	int		loose_scr;
+	bool	move;
 }			t_game;
 
 #endif

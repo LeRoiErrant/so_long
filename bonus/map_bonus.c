@@ -6,11 +6,26 @@
 /*   By: vheran <vheran@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 11:43:48 by vheran            #+#    #+#             */
-/*   Updated: 2021/12/28 12:56:11 by vheran           ###   ########.fr       */
+/*   Updated: 2023/01/09 11:52:21 by vheran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/so_long_bonus.h"
+
+void draw_wall (t_game *g, int x, int y, t_coord c) {
+		if (x == 0 && (y == 0 || y == g->msize.y - 1))
+			mlx_put_image_to_window(g->mlx, g->w, g->outer.cleft.img, c.x, c.y);
+		else if (x == g->msize.x - 1 && (y == 0 || y == g->msize.y - 1))
+			mlx_put_image_to_window(g->mlx, g->w, g->outer.cright.img, c.x, c.y);
+		else if (x == 0)
+			mlx_put_image_to_window(g->mlx, g->w, g->outer.left.img, c.x, c.y);
+		else if (x == g->msize.x - 1)
+			mlx_put_image_to_window(g->mlx, g->w, g->outer.right.img, c.x, c.y);
+		else if (y == 0 || y == g->msize.y - 1)
+			mlx_put_image_to_window(g->mlx, g->w, g->outer.wall.img, c.x, c.y);
+		else
+			mlx_put_image_to_window(g->mlx, g->w, g->wall.img, c.x, c.y);
+}
 
 void	draw_square(t_game *g, int x, int y)
 {
@@ -19,7 +34,7 @@ void	draw_square(t_game *g, int x, int y)
 	c.x = x * g->size;
 	c.y = y * g->size;
 	if (g->map[y][x] == '1')
-		mlx_put_image_to_window(g->mlx, g->w, g->wall.img, c.x, c.y);
+		draw_wall(g, x, y, c);
 	else
 	{
 		mlx_put_image_to_window(g->mlx, g->w, g->floor.img, c.x, c.y);

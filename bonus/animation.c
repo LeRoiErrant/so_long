@@ -6,7 +6,7 @@
 /*   By: vheran <vheran@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 12:39:24 by vheran            #+#    #+#             */
-/*   Updated: 2022/01/13 14:29:23 by vheran           ###   ########.fr       */
+/*   Updated: 2023/01/09 09:20:42 by vheran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ static void	anim_pc(t_pc *pc, int sprite)
 
 static void	get_anim(t_game *g, int frame)
 {
+	g->move = true;
 	if (frame == 0 || frame == 2)
 	{
 		anim_pc(&g->pc, 0);

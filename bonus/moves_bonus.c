@@ -6,7 +6,7 @@
 /*   By: vheran <vheran@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 18:02:36 by vheran            #+#    #+#             */
-/*   Updated: 2022/01/13 14:29:05 by vheran           ###   ########.fr       */
+/*   Updated: 2022/06/20 15:49:47 by vheran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	move_pc(t_game *g, t_coord d, t_coord pc)
 	t_coord	c;
 	int		i;
 
+	(void) i;
 	i = 0;
 	c.x = pc.x * g->size;
 	c.y = pc.y * g->size;
