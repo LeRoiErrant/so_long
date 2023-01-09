@@ -1,4 +1,5 @@
 # so_long
+*And thanks for all the fish! 🐟*
 
 <p align="center">
   <img height="300" src="README/so_long_quick.gif">
